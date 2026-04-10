@@ -117,7 +117,9 @@ public final class SystemSpellChecker: SpellChecker, @unchecked Sendable {
             NSSpellChecker.shared.learnWord(word)
         }
         #elseif canImport(UIKit)
-        UITextChecker.learnWord(word)
+        await MainActor.run {
+            UITextChecker.learnWord(word)
+        }
         #endif
     }
 
@@ -127,7 +129,9 @@ public final class SystemSpellChecker: SpellChecker, @unchecked Sendable {
             NSSpellChecker.shared.ignoreWord(word, inSpellDocumentWithTag: 0)
         }
         #elseif canImport(UIKit)
-        UITextChecker.ignoreWord(word)
+        await MainActor.run {
+            UITextChecker().ignoreWord(word)
+        }
         #endif
     }
 }
