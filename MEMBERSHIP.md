@@ -26,7 +26,7 @@ This primitive is a member of the Document Editor primitive family. It provides 
 
 1. Changes to spell-check result types: affects how RichTextPrimitive renders corrections; test through the composition.
 2. Platform-specific behavior differences (macOS vs. iOS): keep the public API platform-agnostic; platform specifics stay internal.
-3. Consult [dependency audit](../docs/plans/2026-04-19-document-editor-dependency-audit.md).
+3. Consult [dependency audit](../RichTextEditorKit/docs/plans/2026-04-19-document-editor-dependency-audit.md).
 4. Document ripple impact in the commit/PR.
 
 ## Scope of Membership
