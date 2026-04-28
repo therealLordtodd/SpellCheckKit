@@ -6,7 +6,7 @@ let package = Package(
     name: "SpellCheckKit",
     platforms: [
         .macOS(.v14),
-        .iOS(.v15),
+        .iOS(.v17),
     ],
     products: [
         .library(name: "SpellCheckKit", targets: ["SpellCheckKit"]),
